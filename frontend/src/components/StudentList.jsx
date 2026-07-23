@@ -41,17 +41,17 @@ const handleEdit = (student) => {
 
                 <p>{student.email}</p>
 
-              <div className="flex gap-3 mt-3">
+             <div className="flex gap-3 mt-3">
   <button
     onClick={() => handleDelete(student.id)}
-    className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition duration-200"
+    className="bg-red-500 hover:bg-red-600 hover:scale-105 active:scale-95 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
   >
     Delete
   </button>
 
   <button
     onClick={() => handleEdit(student)}
-    className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg transition duration-200"
+    className="bg-yellow-500 hover:bg-yellow-600 hover:scale-105 active:scale-95 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
   >
     Edit
   </button>
