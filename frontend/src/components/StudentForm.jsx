@@ -20,7 +20,8 @@ function StudentForm({ loadStudents, editingStudent, setEditingStudent }) {
       setEditingStudent(null);
 
     } else {
-
+       
+      console.log(student);
       await addStudent(student);
 
     }
@@ -74,7 +75,7 @@ useEffect(() => {
         className="border p-2 w-full rounded"
         value={student.age}
         onChange={(e) => 
-            setStudent({...student, age: e.target.value})
+            setStudent({...student, age: Number(e.target.value)})
         }
 
       />
