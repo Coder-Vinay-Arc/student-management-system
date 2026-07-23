@@ -4,6 +4,7 @@ import com.vinay.studentmanagement.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.vinay.studentmanagement.entity.Student;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
@@ -17,7 +18,9 @@ public class StudentService {
     }
 
     public List<Student> getAllStudents() {
-        return studentRepository.findAll();
+        return studentRepository.findAll(
+                Sort.by(Sort.Direction.DESC, "id")
+        );
     }
 
     public Student getStudentById(Long id) {
