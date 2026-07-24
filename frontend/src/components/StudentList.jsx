@@ -2,14 +2,16 @@ import { deleteStudent } from "../services/studentService";
 
 function StudentList({ students, loadStudents, setEditingStudent }) {
 
-    const handleDelete = async (id) => {
+ const handleDelete = async (id) => {
+  setStudents((prevStudents) =>
+    prevStudents.filter((student) => student.id !== id)
+  );
+
   try {
     await deleteStudent(id);
-    await loadStudents();
-
-
   } catch (error) {
     console.log(error);
+    await loadStudents();
   }
 };
 

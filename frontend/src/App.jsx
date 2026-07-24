@@ -32,10 +32,11 @@ function App() {
     setEditingStudent={setEditingStudent}
 />
 
-      <StudentList
-    students={students}
-    loadStudents={loadStudents}
-    setEditingStudent={setEditingStudent}
+    <StudentList
+  students={students}
+  setStudents={setStudents}
+  loadStudents={loadStudents}
+  setEditingStudent={setEditingStudent}
 />
 
     </div>
